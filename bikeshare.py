@@ -64,7 +64,7 @@ qplot(x = User.Type,
       ylab='Bike trip duration')
 
 # Print General Information by calling our function
-ny=chi=general_impression_data(my.files[1])
+ny=general_impression_data(my.files[1])
 #Distribution of user per birth Year
 table(ny$Birth.Year)
 #Identify statistics on Trip duration in New Yory
