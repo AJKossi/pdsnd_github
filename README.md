@@ -5,7 +5,9 @@ Readme file created on 08/14/2018
 Bikeshare system data
 
 ### Description
-Describe what your project is about and what it does
+Bikeshare system collect data about 3 states in USA:
+washington, Chicago and New york. We must analyse this data in this
+R data science Proramm
 
 ### Files used
 Include the files used
