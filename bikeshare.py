@@ -1,4 +1,3 @@
-
 #We build a list of our files to read it in loop by a function
 my.files = c('new_york_city.csv','washington.csv','chicago.csv')
 #Load ggplot2 library for all visualizations
@@ -25,12 +24,6 @@ general_impression_data = function(filename){
       return (files.read)
 }
 length(my.files)
-
-
-
-
-
-
 
 # Reading of chicago file data, print general information on data set
 chi=general_impression_data(my.files[3])
