@@ -10,7 +10,9 @@ washington, Chicago and New york. We must analyse this data in this
 R data science Proramm
 
 ### Files used
-Include the files used
+The main file used is bikeshare.py or bikeshare.R. We have also CSV data files
+include in project about 3 states: chicago.csv, new-york-city.csv and
+washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
