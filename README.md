@@ -16,3 +16,9 @@ washington.csv
 
 ### Credits
 With love of Udacity instructor.
+
+### Data collected
+Bikeshare system data is collected on 3 USA states: Chicago, New york and
+washington. Variables studied in these 3 states are Start Time, End Time,
+Trip Duration, Start Station, End Station, User Type. Chicago has two others
+variables Gender, Birth Year.
