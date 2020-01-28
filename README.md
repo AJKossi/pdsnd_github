@@ -15,4 +15,4 @@ include in project about 3 states: chicago.csv, new-york-city.csv and
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+With love of Udacity instructor.
