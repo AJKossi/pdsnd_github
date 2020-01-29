@@ -1,4 +1,3 @@
-
 #We build a list of our files to read it in loop by a function
 my.files = c('new_york_city.csv','washington.csv','chicago.csv')
 #Load ggplot2 library for all visualizations
@@ -6,28 +5,25 @@ library(ggplot2)
 #We build a general function to avoid rewriting the reading file, first summaries code
 #Our function take file name in parameter
 #The output of this general function will print the dimensions, the variables and summary on every data set
-#This function can be used to read every file and 
+#This function can be used to read every file and
 general_impression_data = function(filename){
       #Save object of file read in variable
       files.read=read.csv(file=filename)
       #Print this title to identify every data set of every state
       print(paste("Variables of",filename,"bike data",sep=" "))
       #Identify variables names of data set
-      print(names(files.read))
+      variable.names.studied = names(files.read)
+      print(variable.names.studied)
       #Print title on Summary of data set
-      print(paste("Summary on",filename,"bike data",sep=" "))
+      title.data.summary = paste("Summary on",filename,"bike data",sep=" ")
+      print(title.data.summary)
       #Compute summary on data set
-      print(summary(files.read))
+      data.summary = summary(files.read)
+      print(data.summary)
       #return object  of file read
       return (files.read)
 }
 length(my.files)
-
-
-
-
-
-
 
 # Reading of chicago file data, print general information on data set
 chi=general_impression_data(my.files[3])
@@ -39,10 +35,10 @@ table(chi$Gender)
 by(chi$Trip.Duration,chi$Gender,summary)
 #Histogramm of Trip duration by Gender
 ggplot(aes(x=Trip.Duration), data=subset(chi,!Gender=='')) +
-    geom_histogram(binwidth=200,color = 'black', fill = '#FFFFFF') + 
+    geom_histogram(binwidth=200,color = 'black', fill = '#FFFFFF') +
     ggtitle('Histogram of Trip duration by Gender in Chicago') +
-    labs(x = "Trip duration",y="Number of bike users system") + 
-    scale_x_continuous(limits=c(60,3600),breaks=seq(60,3600,600)) + 
+    labs(x = "Trip duration",y="Number of bike users system") +
+    scale_x_continuous(limits=c(60,3600),breaks=seq(60,3600,600)) +
     facet_wrap(~Gender)
 
 # Call our function to print general function on our data
@@ -55,13 +51,13 @@ by(wash$Trip.Duration,wash$User.Type,summary)
 #Represent these statistics of trip duration by User type with box plot
 qplot(x = User.Type,
       y = Trip.Duration,data = subset(wash,!User.Type==''),
-      geom = 'boxplot', 
+      geom = 'boxplot',
       ylim = c(60,3600),
       xlab='Users type in bike system',
       ylab='Bike trip duration')
 
 # Print General Information by calling our function
-ny=chi=general_impression_data(my.files[1])
+ny=general_impression_data(my.files[1])
 #Distribution of user per birth Year
 table(ny$Birth.Year)
 #Identify statistics on Trip duration in New Yory
